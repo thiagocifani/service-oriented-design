@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'active_record'
 require 'yaml'
+require 'logger'
 
 desc "Load the environment"
   task :environment do
@@ -17,5 +18,3 @@ desc "Load the environment"
       ActiveRecord::Migrator.migrate("db/migrate")
     end
   end
-  
-end
